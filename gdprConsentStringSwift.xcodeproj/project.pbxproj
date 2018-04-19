@@ -10,6 +10,14 @@
 		F10CAFFD20867FD4008BCDB4 /* gdprConsentStringSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F10CAFF320867FD4008BCDB4 /* gdprConsentStringSwift.framework */; };
 		F10CB00220867FD4008BCDB4 /* gdprConsentStringSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB00120867FD4008BCDB4 /* gdprConsentStringSwiftTests.swift */; };
 		F10CB00420867FD4008BCDB4 /* gdprConsentStringSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = F10CAFF620867FD4008BCDB4 /* gdprConsentStringSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F10CB00E20868030008BCDB4 /* ConsentStringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB00D20868030008BCDB4 /* ConsentStringProtocol.swift */; };
+		F10CB0102086807F008BCDB4 /* ConsentString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB00F2086807F008BCDB4 /* ConsentString.swift */; };
+		F10CB01120868158008BCDB4 /* ConsentString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB00F2086807F008BCDB4 /* ConsentString.swift */; };
+		F10CB0122086815A008BCDB4 /* ConsentStringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB00D20868030008BCDB4 /* ConsentStringProtocol.swift */; };
+		F10CB0142086827A008BCDB4 /* ConsentStringError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB0132086827A008BCDB4 /* ConsentStringError.swift */; };
+		F10CB0152086827C008BCDB4 /* ConsentStringError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB0132086827A008BCDB4 /* ConsentStringError.swift */; };
+		F10CB01720868BF8008BCDB4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB01620868BF8008BCDB4 /* String.swift */; };
+		F10CB01820868BFC008BCDB4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB01620868BF8008BCDB4 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +37,10 @@
 		F10CAFFC20867FD4008BCDB4 /* gdprConsentStringSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gdprConsentStringSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10CB00120867FD4008BCDB4 /* gdprConsentStringSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gdprConsentStringSwiftTests.swift; sourceTree = "<group>"; };
 		F10CB00320867FD4008BCDB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F10CB00D20868030008BCDB4 /* ConsentStringProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringProtocol.swift; sourceTree = "<group>"; };
+		F10CB00F2086807F008BCDB4 /* ConsentString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentString.swift; sourceTree = "<group>"; };
+		F10CB0132086827A008BCDB4 /* ConsentStringError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringError.swift; sourceTree = "<group>"; };
+		F10CB01620868BF8008BCDB4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +85,10 @@
 			children = (
 				F10CAFF620867FD4008BCDB4 /* gdprConsentStringSwift.h */,
 				F10CAFF720867FD4008BCDB4 /* Info.plist */,
+				F10CB00D20868030008BCDB4 /* ConsentStringProtocol.swift */,
+				F10CB00F2086807F008BCDB4 /* ConsentString.swift */,
+				F10CB0132086827A008BCDB4 /* ConsentStringError.swift */,
+				F10CB01620868BF8008BCDB4 /* String.swift */,
 			);
 			path = gdprConsentStringSwift;
 			sourceTree = "<group>";
@@ -148,6 +164,7 @@
 				TargetAttributes = {
 					F10CAFF220867FD4008BCDB4 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					F10CAFFB20867FD4008BCDB4 = {
 						CreatedOnToolsVersion = 9.3;
@@ -194,6 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10CB00E20868030008BCDB4 /* ConsentStringProtocol.swift in Sources */,
+				F10CB0102086807F008BCDB4 /* ConsentString.swift in Sources */,
+				F10CB01720868BF8008BCDB4 /* String.swift in Sources */,
+				F10CB0142086827A008BCDB4 /* ConsentStringError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +222,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10CB0122086815A008BCDB4 /* ConsentStringProtocol.swift in Sources */,
 				F10CB00220867FD4008BCDB4 /* gdprConsentStringSwiftTests.swift in Sources */,
+				F10CB01820868BFC008BCDB4 /* String.swift in Sources */,
+				F10CB0152086827C008BCDB4 /* ConsentStringError.swift in Sources */,
+				F10CB01120868158008BCDB4 /* ConsentString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +364,7 @@
 		F10CB00820867FD4008BCDB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.conversant.gdprConsentStringSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +391,7 @@
 		F10CB00920867FD4008BCDB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +417,7 @@
 		F10CB00B20867FD4008BCDB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQN7FXPCA7;
 				INFOPLIST_FILE = gdprConsentStringSwiftTests/Info.plist;
@@ -407,6 +436,7 @@
 		F10CB00C20867FD4008BCDB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQN7FXPCA7;
 				INFOPLIST_FILE = gdprConsentStringSwiftTests/Info.plist;
