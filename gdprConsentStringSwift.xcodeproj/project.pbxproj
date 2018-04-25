@@ -18,6 +18,14 @@
 		F10CB0152086827C008BCDB4 /* ConsentStringError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB0132086827A008BCDB4 /* ConsentStringError.swift */; };
 		F10CB01720868BF8008BCDB4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB01620868BF8008BCDB4 /* String.swift */; };
 		F10CB01820868BFC008BCDB4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB01620868BF8008BCDB4 /* String.swift */; };
+		F10CB04E2088F9DF008BCDB4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB04D2088F9DF008BCDB4 /* Data.swift */; };
+		F10CB04F2088FA67008BCDB4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB04D2088F9DF008BCDB4 /* Data.swift */; };
+		F14A90DA208AAA0F00265329 /* gdprConsentStringSwiftLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14A90D9208AAA0F00265329 /* gdprConsentStringSwiftLib.swift */; };
+		F14A90DE208AAA1A00265329 /* ConsentStringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB00D20868030008BCDB4 /* ConsentStringProtocol.swift */; };
+		F14A90DF208AAA1D00265329 /* ConsentString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB00F2086807F008BCDB4 /* ConsentString.swift */; };
+		F14A90E0208AAA2000265329 /* ConsentStringError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB0132086827A008BCDB4 /* ConsentStringError.swift */; };
+		F14A90E1208AAA2200265329 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB01620868BF8008BCDB4 /* String.swift */; };
+		F14A90E2208AAA2400265329 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CB04D2088F9DF008BCDB4 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +38,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F14A90D5208AAA0F00265329 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F10CAFF320867FD4008BCDB4 /* gdprConsentStringSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = gdprConsentStringSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10CAFF620867FD4008BCDB4 /* gdprConsentStringSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gdprConsentStringSwift.h; sourceTree = "<group>"; };
@@ -41,6 +61,9 @@
 		F10CB00F2086807F008BCDB4 /* ConsentString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentString.swift; sourceTree = "<group>"; };
 		F10CB0132086827A008BCDB4 /* ConsentStringError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringError.swift; sourceTree = "<group>"; };
 		F10CB01620868BF8008BCDB4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F10CB04D2088F9DF008BCDB4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		F14A90D7208AAA0F00265329 /* libgdprConsentStringSwiftLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgdprConsentStringSwiftLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F14A90D9208AAA0F00265329 /* gdprConsentStringSwiftLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gdprConsentStringSwiftLib.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +82,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F14A90D4208AAA0F00265329 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +97,7 @@
 			children = (
 				F10CAFF520867FD4008BCDB4 /* gdprConsentStringSwift */,
 				F10CB00020867FD4008BCDB4 /* gdprConsentStringSwiftTests */,
+				F14A90D8208AAA0F00265329 /* gdprConsentStringSwiftLib */,
 				F10CAFF420867FD4008BCDB4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +107,7 @@
 			children = (
 				F10CAFF320867FD4008BCDB4 /* gdprConsentStringSwift.framework */,
 				F10CAFFC20867FD4008BCDB4 /* gdprConsentStringSwiftTests.xctest */,
+				F14A90D7208AAA0F00265329 /* libgdprConsentStringSwiftLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,12 +115,13 @@
 		F10CAFF520867FD4008BCDB4 /* gdprConsentStringSwift */ = {
 			isa = PBXGroup;
 			children = (
-				F10CAFF620867FD4008BCDB4 /* gdprConsentStringSwift.h */,
-				F10CAFF720867FD4008BCDB4 /* Info.plist */,
 				F10CB00D20868030008BCDB4 /* ConsentStringProtocol.swift */,
 				F10CB00F2086807F008BCDB4 /* ConsentString.swift */,
 				F10CB0132086827A008BCDB4 /* ConsentStringError.swift */,
 				F10CB01620868BF8008BCDB4 /* String.swift */,
+				F10CB04D2088F9DF008BCDB4 /* Data.swift */,
+				F10CAFF620867FD4008BCDB4 /* gdprConsentStringSwift.h */,
+				F10CAFF720867FD4008BCDB4 /* Info.plist */,
 			);
 			path = gdprConsentStringSwift;
 			sourceTree = "<group>";
@@ -100,6 +133,14 @@
 				F10CB00320867FD4008BCDB4 /* Info.plist */,
 			);
 			path = gdprConsentStringSwiftTests;
+			sourceTree = "<group>";
+		};
+		F14A90D8208AAA0F00265329 /* gdprConsentStringSwiftLib */ = {
+			isa = PBXGroup;
+			children = (
+				F14A90D9208AAA0F00265329 /* gdprConsentStringSwiftLib.swift */,
+			);
+			path = gdprConsentStringSwiftLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +193,23 @@
 			productReference = F10CAFFC20867FD4008BCDB4 /* gdprConsentStringSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F14A90D6208AAA0F00265329 /* gdprConsentStringSwiftLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F14A90DD208AAA0F00265329 /* Build configuration list for PBXNativeTarget "gdprConsentStringSwiftLib" */;
+			buildPhases = (
+				F14A90D3208AAA0F00265329 /* Sources */,
+				F14A90D4208AAA0F00265329 /* Frameworks */,
+				F14A90D5208AAA0F00265329 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gdprConsentStringSwiftLib;
+			productName = gdprConsentStringSwiftLib;
+			productReference = F14A90D7208AAA0F00265329 /* libgdprConsentStringSwiftLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -167,6 +225,9 @@
 						LastSwiftMigration = 0930;
 					};
 					F10CAFFB20867FD4008BCDB4 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					F14A90D6208AAA0F00265329 = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -185,6 +246,7 @@
 			targets = (
 				F10CAFF220867FD4008BCDB4 /* gdprConsentStringSwift */,
 				F10CAFFB20867FD4008BCDB4 /* gdprConsentStringSwiftTests */,
+				F14A90D6208AAA0F00265329 /* gdprConsentStringSwiftLib */,
 			);
 		};
 /* End PBXProject section */
@@ -212,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F10CB00E20868030008BCDB4 /* ConsentStringProtocol.swift in Sources */,
+				F10CB04E2088F9DF008BCDB4 /* Data.swift in Sources */,
 				F10CB0102086807F008BCDB4 /* ConsentString.swift in Sources */,
 				F10CB01720868BF8008BCDB4 /* String.swift in Sources */,
 				F10CB0142086827A008BCDB4 /* ConsentStringError.swift in Sources */,
@@ -223,10 +286,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				F10CB0122086815A008BCDB4 /* ConsentStringProtocol.swift in Sources */,
+				F10CB04F2088FA67008BCDB4 /* Data.swift in Sources */,
 				F10CB00220867FD4008BCDB4 /* gdprConsentStringSwiftTests.swift in Sources */,
 				F10CB01820868BFC008BCDB4 /* String.swift in Sources */,
 				F10CB0152086827C008BCDB4 /* ConsentStringError.swift in Sources */,
 				F10CB01120868158008BCDB4 /* ConsentString.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F14A90D3208AAA0F00265329 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F14A90DF208AAA1D00265329 /* ConsentString.swift in Sources */,
+				F14A90E2208AAA2400265329 /* Data.swift in Sources */,
+				F14A90DA208AAA0F00265329 /* gdprConsentStringSwiftLib.swift in Sources */,
+				F14A90E1208AAA2200265329 /* String.swift in Sources */,
+				F14A90E0208AAA2000265329 /* ConsentStringError.swift in Sources */,
+				F14A90DE208AAA1A00265329 /* ConsentStringProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +529,32 @@
 			};
 			name = Release;
 		};
+		F14A90DB208AAA0F00265329 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQN7FXPCA7;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F14A90DC208AAA0F00265329 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQN7FXPCA7;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -478,6 +581,15 @@
 			buildConfigurations = (
 				F10CB00B20867FD4008BCDB4 /* Debug */,
 				F10CB00C20867FD4008BCDB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F14A90DD208AAA0F00265329 /* Build configuration list for PBXNativeTarget "gdprConsentStringSwiftLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F14A90DB208AAA0F00265329 /* Debug */,
+				F14A90DC208AAA0F00265329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
