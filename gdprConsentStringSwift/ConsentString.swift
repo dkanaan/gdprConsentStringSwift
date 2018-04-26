@@ -14,7 +14,7 @@ class ConsentString:ConsentStringProtocol {
         
         //error correction in didSet resets old value if base64decoding fails
         didSet {
-            guard let dataValue = Data(unpaddedBase64String: consentString) else {
+            guard let dataValue = Data(base64Encoded: consentString.base64Padded) else {
                 print("New Consent String Value is not base64 decodable. Throwing away changes.")
                 consentString = oldValue
                 return
@@ -33,7 +33,7 @@ class ConsentString:ConsentStringProtocol {
     */
     public required init(consentString: String) throws {
         self.consentString = consentString
-        guard let dataValue = Data(unpaddedBase64String: self.consentString) else {
+        guard let dataValue = Data(base64Encoded: self.consentString.base64Padded) else {
             throw ConsentStringError.base64DecodingFailed
         }
         consentData = dataValue
@@ -123,13 +123,34 @@ class ConsentString:ConsentStringProtocol {
                 return true
             }
         } else {
+            let consentDataMaxBit = consentData.count * 8 - 1 //1 byte, last bit is 7, for 2 bytes, last is 15 etc...
             let defaultConsent = consentData.intValue(fromBit: rangeDefaultConsent, toBit: rangeDefaultConsent)
             let numEntries = Int(consentData.intValue(fromBit: 174, toBit: 185))
-            for i in 0..<numEntries {
-                
+            var rangeStart = Int64(186)
+            for _ in 0..<numEntries {
+                let entryType = consentData.intValue(fromBit: rangeStart, toBit: rangeStart)
+                if consentDataMaxBit < rangeStart + 16 + 1  + (entryType * 16) {//typebit + either 16 or 32
+                    break
+                }
+                if entryType == 0 {//single
+                    let thisVendorId = consentData.intValue(fromBit: rangeStart + 1, toBit: rangeStart + 16)
+                    if vendorId == thisVendorId {
+                        //if vendorId matches this one, then return opposite of default consent
+                        return defaultConsent == 1 ? false : true
+                    }
+                    rangeStart += 17
+                } else if entryType == 1 {//range
+                    let vendorStart = consentData.intValue(fromBit: rangeStart + 1, toBit: rangeStart + 16)
+                    let vendorFinish = consentData.intValue(fromBit: rangeStart + 18, toBit: rangeStart + 32)
+                    if vendorStart <= vendorId && vendorId <= vendorFinish {
+                        //if vendorId falls within range, then return opposite of default consent
+                        return defaultConsent == 1 ? false : true
+                    }
+                    rangeStart += 33
+                }
             }
+            return defaultConsent == 0 ? false : true
         }
-        return false
     }
     
 }

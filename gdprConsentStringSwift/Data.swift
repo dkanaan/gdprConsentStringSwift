@@ -122,23 +122,6 @@ extension Data {
 
 extension Data {
     
-    /*
-     There appears to be a bug with padding in base64 using "=".  This pads with "A" and clips byte length to original intended length (that's what "=" pad is supposed to do)
- */
-    init?(unpaddedBase64String base64String:String, options:Data.Base64DecodingOptions = []) {
-        
-        let stripped = base64String.base64PaddingRemoved
-        let correctByteLength = ((stripped.count * 6) + 7) / 8
-        let base64StringPaddedWithA = stripped.base64PaddedWithA
-        var newData = Data(base64Encoded: base64StringPaddedWithA, options:options)
-        guard newData != nil else {
-            return nil
-        }
-        while newData!.count > correctByteLength {
-            newData!.removeLast()
-        }
-        self = newData!
-    }
     
     /*
      Returns byte number for bit with error correction for length

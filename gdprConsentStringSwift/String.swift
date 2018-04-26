@@ -10,24 +10,11 @@ import Foundation
 
 extension String {
     
-    static let base64PaddingCharacterSet:CharacterSet = CharacterSet(charactersIn: "=")
-    
-   /* var base64Padded:String {
+    var base64Padded:String {
         get {
             return self.padding(toLength: ((self.count + 3) / 4) * 4,withPad: "=",startingAt: 0)
         }
     }
-    */
-    var base64PaddedWithA:String {
-        get {
-            return self.padding(toLength: ((self.count + 3) / 4) * 4,withPad: "A",startingAt: 0)
-        }
-    }
-    
-    var base64PaddingRemoved:String {
-        get {
-            return self.trimmingCharacters(in: String.base64PaddingCharacterSet)
-        }
-    }
+
     
 }
